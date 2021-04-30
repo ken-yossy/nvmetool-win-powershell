@@ -1,2 +1,67 @@
-# nvmetool-win-powershell
- Sample script of accessing NVMe drive using Windows' inbox NVMe driver
+# nvmetool-win-powershell: Sample script of accessing NVMe drive using Windows' inbox NVMe driver
+
+## Abstract
+Powershell scripts demonstrate issuing NVMe commands to NVMe drive using Windows' inbox NVMe device driver.
+
+## Script list
+
+Scripts are stored in the directory `scripts`.
+
+Table 1. Script list
+
+|         script name | Description                 | Note |
+| ------------------: | :---------------------------|:-----|
+| `get-smart-log.ps1` | Getting S.M.A.R.T. Log Data | refered to NVMe 1.4b[1] |
+
+## Note
+
+Privileged access is required to run the scripts.
+
+## Environment
+
+Confirmed on the following environment:
+
+```powershell
+PS C:\Users\k-yoshii> $PSVersionTable
+
+Name                           Value
+----                           -----
+PSVersion                      5.1.19041.906
+PSEdition                      Desktop
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+BuildVersion                   10.0.19041.906
+CLRVersion                     4.0.30319.42000
+WSManStackVersion              3.0
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+```
+
+* Tested operating system and device driver
+  * Windows 10 Professional 64bit (Version 20H2, Build 19042.928)
+  * stornvme.sys (version 10.0.19041.844, WinBuild 160101.0800)
+
+## Limitations
+
+Only tested with the NVMe drive directly attached to PC via PCIe.
+
+It is ok to access to M.2 drives and M.2 drives that attached to M.2-PCIe converter Add-In-Card (AIC).
+
+Also, it may be ok with U.2 drives.
+
+But it may not work over protocol translations such as usb-nvme.
+
+## To run scripts
+
+```powershell
+PS C:\> ./<script name> <PhysicalDriveNo>
+```
+
+You can find `PhysicalDriveNo` in "Disk Management" utility.
+
+See comments in each script for further information.
+
+## License
+Scripts are released under the MIT License, see LICENSE.
+
+## References
+[1] NVM Express, _"NVM Express\[TM\] Base Specification"_, Revision 1.4b, Sept. 21, 2020
