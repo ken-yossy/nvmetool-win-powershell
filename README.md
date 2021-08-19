@@ -7,11 +7,12 @@ Powershell scripts demonstrate issuing NVMe commands to NVMe drive using Windows
 
 Scripts are stored in the directory `scripts`.
 
-Table 1. Script list
+Table 1. List of scripts
 
 |         script name | Description                 | Note |
 | ------------------: | :---------------------------|:-----|
 | `get-smart-log.ps1` | Getting S.M.A.R.T. Log Data | refered to NVMe 1.4b[1] |
+| `get-subnqn.ps1`    | Retrieving "Serial Number", "Model Name (Number)", "Firmware Revision", and "NVM Subsystem NVMe Qualified Name" from Identify Controller Data |
 
 ## Note
 
