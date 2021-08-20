@@ -38,8 +38,10 @@ SerializationVersion           1.1.0.1
 ```
 
 * Tested operating system and device driver
-  * Windows 10 Professional 64bit (Version 20H2, Build 19042.928)
-  * stornvme.sys (version 10.0.19041.844, WinBuild 160101.0800)
+  * Windows 10 Pro 64bit (Version 21H2, Build 19043.1165)
+    * stornvme.sys (version 10.0.19041.844, WinBuild 160101.0800)
+  * Windows 11 Pro 64bit (Version 21H2, Build 22000.132)
+    * stornvme.sys (version 10.0.22000.132, WinBuild 160101.0800)
 
 ## Limitations
 
