@@ -13,6 +13,7 @@ Table 1. List of scripts
 | ------------------: | :---------------------------|:-----|
 | `get-smart-log.ps1` | Getting S.M.A.R.T. Log Data | refered to NVMe 1.4b[1] |
 | `get-subnqn.ps1`    | Retrieving "Serial Number", "Model Name (Number)", "Firmware Revision", and "NVM Subsystem NVMe Qualified Name" from Identify Controller Data |
+| `get-command-supported.ps1` | Scan Command Supported and Effects log page (excludes vendor specific commands, ZNS and KVS), refered to NVMe 2.0a[2] |
 
 ## Note
 
@@ -68,3 +69,4 @@ Scripts are released under the MIT License, see LICENSE.
 
 ## References
 [1] NVM Express, _"NVM Express\[TM\] Base Specification"_, Revision 1.4b, Sept. 21, 2020
+[2] NVM Express, _"NVM Express\[TM\] Base Specification"_, Revision 2.0a, July 26, 2021
