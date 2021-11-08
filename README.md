@@ -69,4 +69,5 @@ Scripts are released under the MIT License, see LICENSE.
 
 ## References
 [1] NVM Express, _"NVM Express\[TM\] Base Specification"_, Revision 1.4b, Sept. 21, 2020
+
 [2] NVM Express, _"NVM Express\[TM\] Base Specification"_, Revision 2.0a, July 26, 2021
