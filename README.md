@@ -14,6 +14,7 @@ Table 1. List of scripts
 | `get-smart-log.ps1` | Getting S.M.A.R.T. Log Data | refered to NVMe 1.4b[1] |
 | `get-subnqn.ps1`    | Retrieving "Serial Number", "Model Name (Number)", "Firmware Revision", and "NVM Subsystem NVMe Qualified Name" from Identify Controller Data |
 | `get-command-supported.ps1` | Scan Command Supported and Effects log page (excludes vendor specific commands, ZNS and KVS), refered to NVMe 2.0a[2] |
+| `get-selftest-log.ps1` | Retrieve Device Self-test log data (valid entries only) |
 
 ## Note
 
