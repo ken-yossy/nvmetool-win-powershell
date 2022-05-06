@@ -58,6 +58,8 @@ But it may not work over protocol translations such as usb-nvme.
 
 ## To run scripts
 
+Most of scripts can be run as follows:
+
 ```powershell
 PS C:\> ./<script name> <PhysicalDriveNo>
 ```
