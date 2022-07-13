@@ -3,8 +3,8 @@ get-smart-log.ps1: Sample script for getting SMART Log data from an NVMe drive u
 
 Usage: ./get-smart-log.ps1 <PhysicalDriveNo>
 
-Copyright (c) 2021 Kenichiro Yoshii
-Copyright (c) 2021 Hagiwara Solutions Co., Ltd.
+Copyright (c) 2021-2022 Kenichiro Yoshii
+Copyright (c) 2021-2022 Hagiwara Solutions Co., Ltd.
 #>
 Param([parameter(mandatory)][Int]$PhyDrvNo)
 
@@ -51,7 +51,7 @@ public struct NVMeStorageQueryProperty {
     public UInt32 FixedProtocolReturnData;
     public UInt32 ProtocolDataRequestSubValue2;
     public UInt32 ProtocolDataRequestSubValue3;
-    public UInt32 Reserved0;
+    public UInt32 ProtocolDataRequestSubValue4;
 
     [MarshalAs(UnmanagedType.ByValArray, SizeConst = 512)]
     public Byte[] SMARTData;
@@ -152,7 +152,10 @@ $Property.ProtocolType  = 3;  # ProtocolTypeNvme
 $Property.DataType      = 2;  # NVMeDataTypeLogPage
 
 $Property.ProtocolDataRequestValue      = 2; # NVME_LOG_PAGE_HEALTH_INFO
-$Property.ProtocolDataRequestSubValue   = [System.Convert]::ToUInt32("4294967295"); # Namespace ID (0xFFFFFFFF)
+$Property.ProtocolDataRequestSubValue   = 0; # LPOL
+$Property.ProtocolDataRequestSubValue2  = 0; # LPOU
+$Property.ProtocolDataRequestSubValue3  = 0; # Log Specific Identifier in CDW11
+$Property.ProtocolDataRequestSubValue4  = 0; # Retain Asynchronous Event (RAE) and Log Specific Field (LSP) in CDW10
 
 $Property.ProtocolDataOffset = 40;  # sizeof(STORAGE_PROTOCOL_SPECIFIC_DATA)
 $Property.ProtocolDataLength = 512; # sizeof(NVME_SMART_INFO_LOG)
