@@ -16,6 +16,7 @@ Table 1. List of scripts
 | `get-command-supported.ps1` | Scan Command Supported and Effects log page (excludes vendor specific commands, ZNS and KVS), refered to NVMe 2.0a[2] |
 | `get-selftest-log.ps1` | Retrieve Device Self-test log data (valid entries only) |
 | `get-temperature.ps1` | Get and print Composite Temperature periodically |
+| `do-selftest.ps1` | Start or abort Device Self-test |
 
 ## Note
 
@@ -30,10 +31,10 @@ PS C:\users\k-yoshii> $PSVersionTable
 
 Name                           Value
 ----                           -----
-PSVersion                      5.1.19041.1682
+PSVersion                      5.1.19041.2673
 PSEdition                      Desktop
 PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
-BuildVersion                   10.0.19041.1682
+BuildVersion                   10.0.19041.2673
 CLRVersion                     4.0.30319.42000
 WSManStackVersion              3.0
 PSRemotingProtocolVersion      2.3
@@ -41,8 +42,8 @@ SerializationVersion           1.1.0.1
 ```
 
 * Tested operating system and device driver
-  * Windows 10 Pro 64bit (Version 21H2, Build 19043.1682)
-    * stornvme.sys (version 10.0.19041.1566, WinBuild 160101.0800)
+  * Windows 10 Pro 64bit (Version 22H2, Build 19045.2846)
+    * stornvme.sys (version 10.0.19041.2075, WinBuild 160101.0800)
   * Windows 11 Pro 64bit (Version 21H2, Build 22000.132)
     * stornvme.sys (version 10.0.22000.132, WinBuild 160101.0800)
 
